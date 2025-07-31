@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplayer Dice Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="game-container">
+    <h1>🎲 Multiplayer Dice Game</h1>
+
+    <div id="setup">
+      <label>Enter player names (comma-separated):</label><br />
+      <input type="text" id="player-names" placeholder="Alice, Bob" />
+      <label>
+        <input type="checkbox" id="add-bot" /> Add SmartBot
+      </label><br />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game" style="display: none;">
+      <div id="scores"></div>
+
+      <div class="status">
+        <p id="status-text">Game starting...</p>
+        <p id="turn-points">Turn points: 0</p>
+      </div>
+
+      <div class="controls">
+        <button id="roll-btn">🎲 Roll</button>
+        <button id="hold-btn">✋ Hold</button>
+      </div>
+
+      <p id="winner-message"></p>
+    </div>
+  </div>
+  <audio id="sound-roll" src="sounds/roll.mp3"></audio>
+  <audio id="sound-pigout" src="sounds/pigout.mp3"></audio>
+  <audio id="sound-hold" src="sounds/hold.mp3"></audio>
+  <audio id="sound-win" src="sounds/win.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
